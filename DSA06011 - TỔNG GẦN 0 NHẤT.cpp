@@ -6,7 +6,6 @@ using namespace std;
 int n;
 
 void TestCase() {
-    int n;
     cin >> n;
     vector<int> a(n);
     for (int &x : a) cin >> x;
