@@ -30,7 +30,7 @@ void solve() {
 int main() {
 
     FASTER;
-    int t;
+    int t; 
     cin >> t;
     while(t--) solve();
 
