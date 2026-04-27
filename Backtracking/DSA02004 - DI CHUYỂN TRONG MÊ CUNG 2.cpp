@@ -55,7 +55,6 @@ void solve() {
         for(auto it : res) cout << it << ' ';
         cout << endl;
     }
-    
 }
 
 int main() {
