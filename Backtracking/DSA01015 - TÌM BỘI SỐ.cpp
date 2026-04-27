@@ -22,6 +22,7 @@ void solve() {
         qe.push(s + '9');
     }
 }
+
 int main() {
 
     FASTER;
