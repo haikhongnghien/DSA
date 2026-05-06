@@ -33,7 +33,7 @@ bool Union(int u, int v) {
     return true;
 }
 
-void Kruskal(int s) {
+void Kruskal() {
     vector<Edge> MST;
     sort(ds.begin(), ds.end(), [](Edge A, Edge B) -> bool{
         return A.w < B.w;
@@ -60,7 +60,7 @@ void solve() {
         cin >> u >> v >> w;
         ds.push_back({u, v, w});
     }
-    Kruskal(1);
+    Kruskal();
 }
 
 int main() {
