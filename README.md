@@ -19,4 +19,3 @@ DSA/
 ├── Queue
 ├── Graph
 ├── Tree
-└── Linked_List
