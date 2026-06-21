@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+#define FASTER ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define ll long long
+#define endl '\n'
+using namespace std;
+
+int t, n, x, d;
+char c;
+
+struct Node {
+    int data;
+    Node *left, *right;
+    Node(int x) : data(x), left(NULL), right(NULL) {}
+};
+
+void Insert(Node* &root, int x) {
+	if(root == NULL) {
+		root = new Node(x);
+		return;
+	}
+	if(root -> data > x) {
+		Insert(root -> left, x);
+	}
+	else Insert(root -> right, x);
+}
+
+void solve(Node *root, int cnt) {
+	if(root == NULL) return;
+	if(root -> left || root -> right) {
+		d = max(d, cnt);
+	}
+	solve(root -> left, cnt + 1);
+	solve(root -> right, cnt + 1);
+}
+
+int main() {
+    FASTER;
+    cin >> t;
+    while(t--) {
+        cin >> n;
+		Node *root = NULL;
+        for(int i = 1 ; i <= n ; i++) {
+			cin >> x;
+			Insert(root, x);
+		}
+		d = 0;
+		solve(root, 1);
+		cout << d << endl;
+    }
+    return 0;
+}
